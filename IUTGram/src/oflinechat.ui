@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OflineChat</class>
+ <widget class="QDialog" name="OflineChat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1381</width>
+    <height>761</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IUTGram</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/eyeimage/logonomy-1687629985334.jpeg</normaloff>:/eyeimage/logonomy-1687629985334.jpeg</iconset>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1250</x>
+     <y>661</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad,x1:0,y1:0.505682,x2:1,y2:0.477,stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));
+color:rgba(255,255,255,210);
+border-radius:5px;
+}
+QPushButton:hover{
+background-color: qlineargradient(spread:pad,x1:0,y1:0.505682,x2:1,y2:0.477,stop:0 rgba(150,123,111,219),stop:1 rgba(85,81,84,226));
+
+}
+QPushButton:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(150,123,111,255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/eyeimage/emoji_icon.png</normaloff>:/eyeimage/emoji_icon.png</iconset>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>391</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:transparent;
+border-radius:12px;
+
+border:2px solid;
+border-color: rgb(0, 255, 127);</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QListWidget" name="PV_ListWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>361</width>
+       <height>591</height>
+      </rect>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(240, 240, 240);
+border-radius : 20px;
+border:2px solid;
+border-color: rgb(0, 255, 127);
+
+</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QListWidget" name="Group_ListWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>361</width>
+       <height>591</height>
+      </rect>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(240, 240, 240);
+border-radius : 20px;
+border:2px solid;
+border-color: rgb(0, 255, 127);</string>
+     </property>
+     <property name="dragEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="movement">
+      <enum>QListView::Snap</enum>
+     </property>
+     <property name="resizeMode">
+      <enum>QListView::Fixed</enum>
+     </property>
+     <property name="viewMode">
+      <enum>QListView::ListMode</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QListWidget" name="Channel_ListWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>361</width>
+       <height>591</height>
+      </rect>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(240, 240, 240);
+border-radius : 20px;
+border:2px solid;
+border-color: rgb(0, 255, 127);</string>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="chatbar">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>662</y>
+     <width>591</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLineEdit{
+border: 2px solid  rgb(56, 140, 135);
+border-radius : 20px;
+	color: rgb(0, 0, 0);
+
+	background-color: rgb(255, 255, 255);}
+QLineEdit:hover{
+border: 2px solid rgb(85, 255, 127);
+border-radius : 20px;
+}
+QLineEdit:focus{
+border: 2px solid rgb(85, 255, 127);
+border-radius : 20px;
+	background-color: rgb(255, 255, 255);}
+
+
+
+</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter your message . . .</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="flash">
+   <property name="geometry">
+    <rect>
+     <x>1240</x>
+     <y>560</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#flash
+{
+border-image: url(:/eyeimage/3779229.png);
+}
+#flash:hover
+{
+border-image: url(:/eyeimage/4764583.png);
+}
+#flash:pressed
+{
+border-image: url(:/eyeimage/3779229.png);}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendmessage">
+   <property name="geometry">
+    <rect>
+     <x>1250</x>
+     <y>691</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1111111</width>
+     <height>1111111</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad,x1:0,y1:0.505682,x2:1,y2:0.477,stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));
+color:rgba(255,255,255,210);
+border-radius:5px;
+}
+QPushButton:hover{
+background-color: qlineargradient(spread:pad,x1:0,y1:0.505682,x2:1,y2:0.477,stop:0 rgba(150,123,111,219),stop:1 rgba(85,81,84,226));
+
+}
+QPushButton:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(150,123,111,255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/eyeimage/send_icon.png</normaloff>:/eyeimage/send_icon.png</iconset>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>81</y>
+     <width>131</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:12px;
+
+border:2px solid;
+border-color: rgb(0, 255, 127);
+color: rgb(200, 200, 200);
+font: 87 9pt &quot;Segoe UI Black&quot;;
+</string>
+   </property>
+   <property name="title">
+    <string>MENU</string>
+   </property>
+   <widget class="QPushButton" name="PV">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Praivate Chat</string>
+    </property>
+    <property name="statusTip">
+     <string>Praivate Chat</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#PV
+{
+border-image: url(:/eyeimage/10119455.png);
+}
+#PV:hover
+{
+border-image: url(:/eyeimage/10182666.png);
+}
+#PV:pressed
+{
+border-image: url(:/eyeimage/10119455.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Group">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Group Chat</string>
+    </property>
+    <property name="statusTip">
+     <string>Group Chat</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Group
+{
+border-image: url(:/eyeimage/10119445.png);
+}
+#Group:hover
+{
+border-image: url(:/eyeimage/10182665.png);
+}
+#Group:pressed
+{
+border-image: url(:/eyeimage/10119445.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Channel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Channels</string>
+    </property>
+    <property name="statusTip">
+     <string>Channels</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Channel
+{
+border-image: url(:/eyeimage/10119437.png);
+}
+#Channel:hover
+{
+border-image: url(:/eyeimage/10182664.png);
+}
+#Channel:pressed
+{
+border-image: url(:/eyeimage/10119437.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="them">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>510</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#them
+{
+border-image: url(:/eyeimage/1086544.png);
+}
+#them:hover
+{
+border-image: url(:/eyeimage/1086470.png);
+}
+#them:pressed
+{
+border-image: url(:/eyeimage/1086544.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>1381</width>
+     <height>761</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad,x1:0,y1:0.505682,x2:1,y2:0.477,stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>1200</x>
+     <y>30</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(235, 0, 0)</string>
+   </property>
+   <property name="text">
+    <string>Waiting connection..</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="listView">
+   <property name="geometry">
+    <rect>
+     <x>645</x>
+     <y>71</y>
+     <width>691</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/eyeimage/jt4AoG.jpg);
+border-radius : 20px;
+border:20px solid;
+border-color: rgb(0, 255, 127);</string>
+   </property>
+   <property name="verticalScrollMode">
+    <enum>QAbstractItemView::ScrollPerPixel</enum>
+   </property>
+   <property name="horizontalScrollMode">
+    <enum>QAbstractItemView::ScrollPerPixel</enum>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>stackedWidget</zorder>
+  <zorder>chatbar</zorder>
+  <zorder>sendmessage</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>label_2</zorder>
+  <zorder>listView</zorder>
+  <zorder>flash</zorder>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
