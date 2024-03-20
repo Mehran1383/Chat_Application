@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/eyeimage">
+        <file>pngwing.com.png</file>
+        <file>10119437.png</file>
+        <file>10119445.png</file>
+        <file>10119455.png</file>
+        <file>10182664.png</file>
+        <file>10182665.png</file>
+        <file>10182666.png</file>
+        <file>emoji_icon.png</file>
+        <file>send_icon.png</file>
+        <file>bgi1.png</file>
+        <file>bgi2.png</file>
+        <file>bgi3.png</file>
+        <file>jt4AoG.jpg</file>
+        <file>3779229.png</file>
+        <file>4764583.png</file>
+        <file>1086470.png</file>
+        <file>1086544.png</file>
+        <file>temp_profile_pic.jpg</file>
+        <file>1177568.png</file>
+        <file>addPhoto_icon.png</file>
+        <file>download (1).png</file>
+        <file>logonomy-1687629985334.jpeg</file>
+        <file>2550285.png</file>
+        <file>2550452.png</file>
+        <file>wp6028915-whatsapp-chat-iphone-wallpapers.jpg</file>
+        <file>wp10254494-whatsapp-chat-wallpapers.jpg</file>
+        <file>4033019.png</file>
+        <file>4034210.png</file>
+        <file>9694699.png</file>
+        <file>9694707.png</file>
+        <file>domingo-1687633608051.jpg</file>
+        <file>leave_icon.png</file>
+    </qresource>
+    <qresource prefix="/Loginimage">
+        <file>pxfuel.jpg</file>
+        <file>pngwin.com</file>
+        <file>pngwing.com(1).png</file>
+        <file>couple-chatting-on-mobile-3773159-3162252.gif</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>emoji_dataset.txt</file>
+    </qresource>
+</RCC>
