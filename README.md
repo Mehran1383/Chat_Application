@@ -1,19 +1,74 @@
-"IUTGram" ,the project of AP , a simple messenger with ability to send text messages through private , group and channels  .
+### Desktop chat application
 
-![domingo-1687633608051](https://github.com/KassemKayall/Massenger/assets/134122361/0f60c947-f79f-4ab0-ac1f-c6cdd45ac4a6)
+#### Communication with Server
+The application uses provided APIs to send requests to the server and receive appropriate responses to be used in the messenger.
 
-Contributors:
+#### API Structure
+```
+http://hostname:port/command?parameters
+```
+- **hostname**: Address of the server where the server code is running.
+- **port**: Port for communication with the server.
+- **command**: Commands requested from the server.
+- **parameters**: Optional key-value pairs sent to the server with the request.
 
-MehranHashemi
+#### Example Request
+Registering a user with the username `Mehran` and password `1383`:
+```
+http://api.barafardayebehtar.ml:8080/signup?username=Mehran&password=1383
+```
+Responses are in JSON format, with `code` and `message` fields indicating the status and response message from the server.
 
-KassemKayall
+#### Response Codes
+- **200**: Request successful.
+- **404**: Request unsuccessful, information not found.
+- **204**: Request unsuccessful, duplicate information.
+- **401**: Request unsuccessful, incorrect information.
 
-[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=Mehran1383)](https://github.com/Mehran1383)
-[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=KassemKayall)](https://github.com/KassemKayall)
+#### Server Details
+- **hostname**: `api.barafardayebehtar.ml`
+- **port**: `8080`
 
-Some features of project :
+#### Request Format
+```
+http://api.barafardayebehtar.ml:8080/command?parameters
+```
 
-In addition to  sending and receiving messages, this program has these features :
+#### Main Messenger Scenario
+1. **Sign Up**: Register as a user.
+2. **Login**: Obtain a unique token representing user identity.
+3. **All Requests**: Sent with the unique token for user identification.
+4. **Logout**: Token is set to `null` and a new token is assigned upon next login.
+
+#### Available APIs
+| Command            | Parameters                                  | Description                                                              |
+|--------------------|---------------------------------------------|--------------------------------------------------------------------------|
+| signup             | username, password, firstname, lastname     | Register a new user.                                                     |
+| login              | username, password                          | Log in a user and receive a unique token.                                |
+| logout             | username, password                          | Log out a user and nullify their token.                                  |
+| creategroup        | token, group_name, group_title              | Create a new group.                                                      |
+| createchannel      | token, channel_name, channel_title          | Create a new channel.                                                    |
+| getuserlist        | token                                       | Get the list of users the current user has chatted with.                 |
+| getgrouplist       | token                                       | Get the list of groups the current user is a member of.                  |
+| getchannellist     | token                                       | Get the list of channels the current user is a member of.                |
+| getuserchats       | token, dst, date                            | Get the list of messages with a specific user.                           |
+| getgroupchats      | token, dst, date                            | Get the list of messages in a specific group.                            |
+| getchannelchats    | token, dst, date                            | Get the list of messages in a specific channel.                          |
+| joingroup          | token, group_name                           | Join a specific group.                                                   |
+| joinchannel        | token, channel_name                         | Join a specific channel.                                                 |
+| sendmessageuser    | token, dst, body                            | Send a message to a specific user.                                       |
+| sendmessagegroup   | token, dst, body                            | Send a message in a specific group.                                      |
+| sendmessagechannel | token, dst, body                            | Send a message in a specific channel.                                    |
+
+#### Offline Message Access
+Store all requested messages in categorized files to access the messenger information offline.
+
+1. Create folders: `Users`, `Groups`, `Channels`.
+2. For each user, group, and channel, create respective files and save messages for offline access.
+
+#### Some features of project :
+
+In addition to sending and receiving messages, this program has these features :
 
 1. A beautiful ui which makes this messenger more atractive 
 
@@ -31,7 +86,7 @@ In addition to  sending and receiving messages, this program has these features 
 
 ![Screenshot (606)](https://github.com/KassemKayall/Massenger/assets/134122361/0531c097-e2a1-492d-a152-9201488508ce)
 
-And the other features you can find while using app . . .
+#### 
 
 
 
