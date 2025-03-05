@@ -1,6 +1,6 @@
 # Desktop chat application
 ---
-## Details of implementaion design
+## Details of implementation design
 ### Communication with Server
 The application uses provided APIs to send requests to the server and receive appropriate responses to be used in the messenger.
 
