@@ -1,6 +1,6 @@
 # Desktop chat application
----
-## Details of implementation design
+> Prepared for Advanced programming course in Isfahan university of technology
+## Details of client/server implementation 
 ### Communication with Server
 The application uses provided APIs to send requests to the server and receive appropriate responses to be used in the messenger.
 
@@ -71,23 +71,43 @@ The application stores all requested messages in categorized files to access the
 
 In addition to sending and receiving messages, this program has these features :
 
----
-1. A beautiful ui which makes this messenger more atractive
+- A beautiful ui which makes this messenger more atractive
 
 ![Screenshot (603)](https://github.com/KassemKayall/Massenger/assets/134122361/b06dd1fa-2273-49b5-8d0d-bdeb44dbda63)
 ---
-2. Ability to capture or select a picture for profile
+- Ability to capture or select a picture for profile
 
 ![Screenshot (604)](https://github.com/KassemKayall/Massenger/assets/134122361/0f5c2aea-39a0-43d5-94c0-7cca7181243f)
 ---
-3. Changing background theme
+- Changing background theme
 
 ![Screenshot (605)](https://github.com/KassemKayall/Massenger/assets/134122361/3fd931cf-f34a-4a9e-ad83-a339a4598f47)
 ---
-4. Changing font style and size
+- Changing font style and size
 
 ![Screenshot (606)](https://github.com/KassemKayall/Massenger/assets/134122361/0531c097-e2a1-492d-a152-9201488508ce)
 ---
+
+## Prerequisites
+
+- Qt 5.13 or later
+- C++ 11 compatible compiler
+- qmake (included with Qt)
+
+## Building the Project
+
+1. Clone the repository:
+
+    ```sh
+    git clone <repository-url>
+    ```
+
+2. Open the project in Qt Creator:
+    - Open `nmassenger.pro` for the client application.
+
+3. Build the project using Qt Creator.
+---
+
 
 
 
